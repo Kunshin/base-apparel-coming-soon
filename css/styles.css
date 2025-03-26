@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: "Josefin Sans", serif;
+  font-size: 16px;
+  background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  height: 100vh;
+}
+
+header {
+  width: 58%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+}
+header .logo {
+  flex: 1;
+  padding: 0 18%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 58%;
+  height: 80%;
+  background-image: url(../images/bg-pattern-desktop.svg);
+  background-size: cover;
+  background-position: left bottom;
+}
+.container .hero {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 42%;
+  height: 100%;
+  background-image: url("../images/hero-desktop.jpg");
+  background-size: cover;
+}
+.container .content {
+  padding: 0 25% 0 18%;
+}
+.container .content h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  color: hsl(0, 6%, 24%);
+  margin: 0 0 2rem 0;
+}
+.container .content h1 span {
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+}
+.container .content p {
+  color: hsl(0, 36%, 70%);
+  margin: 0 0 2rem 0;
+  line-height: 1.5;
+}
+.container .content form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.container .content form input {
+  width: calc(100% - 100px);
+  height: 50px;
+  border: 1px solid hsl(0, 36%, 70%);
+  border-radius: 25px;
+  padding-inline: 30px;
+  color: hsl(0, 36%, 70%);
+}
+.container .content form input.error {
+  border: 1px solid hsl(0, 93%, 68%);
+}
+.container .content form button {
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  width: 100px;
+  height: 54px;
+  border-radius: 27px;
+  border-width: 0;
+  position: absolute;
+  right: 0;
+  box-shadow: 0 5px 15px hsl(0, 80%, 86%);
+}
+.container .content form button:hover {
+  cursor: pointer;
+}
+.container .content form button:active {
+  background-image: none;
+  background-color: hsl(0, 80%, 86%);
+}
+.container .content form #errorMessage {
+  margin-top: 10px;
+  padding-inline: 30px;
+  color: hsl(0, 74%, 74%);
+  display: none;
+}
+.container .content form #errorIcon {
+  position: absolute;
+  right: 115px;
+  top: 14px;
+  display: none;
+}
+
+@media (max-width: 479px) {
+  header {
+    width: 100%;
+    height: 10%;
+  }
+  header .logo {
+    padding: 0 10%;
+  }
+  header .logo img {
+    width: 40%;
+  }
+  .container {
+    width: 100%;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .container .hero {
+    position: initial;
+    width: 100%;
+    height: 34%;
+    background-image: url("../images/hero-mobile.jpg");
+  }
+  .container .content {
+    padding: 0 10% 20%;
+    text-align: center;
+  }
+  .container .content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 844px) and (orientation: landscape) {
+  body {
+    height: 600px;
+  }
+  body .container .hero {
+    height: 600px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
